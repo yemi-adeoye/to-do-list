@@ -10,7 +10,6 @@ const Text = ({ text, id, className }) => {
 };
 
 Text.propTypes = {
-  text: PropTypes.string,
   id: PropTypes.string,
   className: PropTypes.string,
 };

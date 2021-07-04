@@ -28,7 +28,6 @@ const TodoList = ({ todos, todoItemDelHandler, todoItemCheckHandler }) => {
       />
     );
   });
-  console.log(items);
 
   return <div className='items'>{items}</div>;
 };

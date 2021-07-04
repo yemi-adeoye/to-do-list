@@ -11,7 +11,6 @@ const GenericInput = ({
   label,
   isChecked,
 }) => {
-  console.log(isChecked);
   let checked = isChecked ? 'checked' : null;
   return (
     <>
@@ -37,7 +36,6 @@ GenericInput.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChangeHandler: PropTypes.func.isRequired,
-  onKeyDownHandler: PropTypes.func.isRequired,
 };
 
 export default GenericInput;

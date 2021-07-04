@@ -24,7 +24,6 @@ const Todo = ({
   todoKey,
   todoError,
 }) => {
-  console.log(todoCheckId);
   return (
     <div id={'item-' + count} className='item'>
       <Text id={countId} className={countClass} text={count} />
