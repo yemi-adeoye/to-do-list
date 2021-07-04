@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = (props) => {
-  const { id, className, text } = props.headerProps;
+const Header = ({ id, className, text }) => {
   return (
     <header id={id} className={className}>
       {text}
@@ -11,6 +10,8 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  headerProps: PropTypes.object.isRequired,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };
 export default Header;

@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 const GenericInput = ({
   type,
   fieldName,
+  id,
   onChangeHandler,
+  onKeyDownHandler,
   error,
   value,
   label,
+  isChecked,
 }) => {
+  console.log(isChecked);
+  let checked = isChecked ? 'checked' : null;
   return (
     <>
       <span className='error'> {error} </span>
@@ -15,9 +20,11 @@ const GenericInput = ({
       <input
         type={type}
         name={fieldName}
-        id={fieldName}
+        id={id}
         onChange={onChangeHandler}
+        onKeyDown={onKeyDownHandler}
         value={value}
+        checked={checked}
       />
     </>
   );
@@ -30,6 +37,7 @@ GenericInput.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChangeHandler: PropTypes.func.isRequired,
+  onKeyDownHandler: PropTypes.func.isRequired,
 };
 
 export default GenericInput;
